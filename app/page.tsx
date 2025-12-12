@@ -8,14 +8,11 @@ export default function Home() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Curated</h1>
           <p className={styles.heroSubtitle}>Curated clothing as creative expression</p>
-          <Link href="/shop" className={styles.heroButton}>
-            SHOP NOW
-          </Link>
         </div>
       </section>
 
       <section className={styles.categories}>
-        <Link href="/shop?category=tops" className={styles.categoryCard}>
+        <Link href="/collections" className={styles.categoryCard}>
           <div className={styles.categoryOverlay}>
             <span className={styles.categoryName}>Collections</span>
           </div>
