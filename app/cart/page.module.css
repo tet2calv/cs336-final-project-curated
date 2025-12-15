@@ -1,0 +1,150 @@
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+  font-family: var(--font-sans);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0 0 2rem 0;
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
+}
+
+.item {
+  border: 1px solid #eee;
+  padding: 1.25rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.left {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.qty {
+  width: 70px;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #ddd;
+  font-family: inherit;
+}
+
+.price {
+  width: 110px;
+  text-align: right;
+  font-weight: 600;
+  color: #000;
+}
+
+.remove {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 0.55rem 0.8rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.remove:hover {
+  border-color: #000;
+}
+
+.footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtotal {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.checkout {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.1rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.checkout:hover {
+  opacity: 0.9;
+}
+
+.emptyState {
+  margin-top: 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid #eee;
+  max-width: 520px;
+}
+
+.emptyIcon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #eee;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.empty {
+  color: #111; /* was #666 */
+  font-size: 1rem; /* was 0.9rem */
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.emptySub {
+  margin: 0.35rem 0 1.25rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.emptyCta {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.1rem;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.emptyCta:hover {
+  opacity: 0.9;
+}
+

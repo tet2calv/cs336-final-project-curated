@@ -1,24 +1,30 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import styles from './Header.module.css';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import styles from "./Header.module.css";
+import { useCart } from "./CartProvider";
 
 const Header = () => {
   const pathname = usePathname();
+  const { itemCount } = useCart();
 
   return (
     <header className={styles.header}>
       <nav className={styles.navLeft}>
-        <Link 
-          href="/" 
-          className={`${styles.navLink} ${pathname === '/' ? styles.active : ''}`}
+        <Link
+          href="/"
+          className={`${styles.navLink} ${
+            pathname === "/" ? styles.active : ""
+          }`}
         >
           HOME
         </Link>
-        <Link 
-          href="/shop" 
-          className={`${styles.navLink} ${pathname.startsWith('/shop') ? styles.active : ''}`}
+        <Link
+          href="/shop"
+          className={`${styles.navLink} ${
+            pathname.startsWith("/shop") ? styles.active : ""
+          }`}
         >
           SHOP
         </Link>
@@ -33,7 +39,7 @@ const Header = () => {
           SEARCH
         </Link>
         <Link href="/cart" className={styles.navLink}>
-          CART
+          CART{itemCount > 0 ? ` (${itemCount})` : ""}
         </Link>
       </nav>
     </header>
