@@ -1,0 +1,133 @@
+.container {
+    min-height: calc(100vh - 80px);
+    padding: 3rem 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.searchSection {
+    margin-bottom: 3rem;
+}
+
+.searchInputWrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.25rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.searchInput:focus {
+    border-color: #000;
+}
+
+.searchInput::placeholder {
+    color: #999;
+}
+
+.clearButton {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.clearButton:hover {
+    color: #000;
+}
+
+.resultsSection {
+    min-height: 300px;
+}
+
+.message {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+}
+
+.resultsCount {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.resultsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.productCard {
+    text-decoration: none;
+    color: inherit;
+}
+
+.imageWrapper {
+    position: relative;
+    aspect-ratio: 1;
+    background: #f8f8f8;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.productImage {
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.productCard:hover .productImage {
+    transform: scale(1.03);
+}
+
+.productInfo {
+    text-align: center;
+}
+
+.productName {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0 0 0.25rem 0;
+    color: #000;
+}
+
+.productPrice {
+    font-size: 0.75rem;
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .resultsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1.5rem;
+    }
+
+    .resultsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}

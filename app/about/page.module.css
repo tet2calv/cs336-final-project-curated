@@ -1,0 +1,154 @@
+.container {
+    min-height: calc(100vh - 80px);
+    padding: 3rem 2.5rem 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pageTitle {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    letter-spacing: 0.02em;
+}
+
+.section {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 5rem;
+    align-items: flex-start;
+}
+
+.sectionReverse {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4rem;
+    margin-bottom: 5rem;
+    align-items: flex-start;
+}
+
+.sectionFull {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.textBlock {
+    flex: 1;
+}
+
+.sectionTitle {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.paragraph {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.25rem;
+}
+
+.paragraphCentered {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+.imageBlock {
+    flex: 1;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: #f5f5f5;
+}
+
+.imageWrapperSmall {
+    position: relative;
+    width: 80%;
+    aspect-ratio: 3/4;
+    background: #f5f5f5;
+}
+
+.wideImageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #f5f5f5;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.contactSection {
+    border-top: 1px solid #eee;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.contactGrid {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.contactItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contactLabel {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.contactLink {
+    font-size: 0.9rem;
+    color: #000;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.contactLink:hover {
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1.5rem 4rem;
+    }
+
+    .pageTitle {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .section,
+    .sectionReverse {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .imageWrapperSmall {
+        width: 100%;
+    }
+
+    .contactGrid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
