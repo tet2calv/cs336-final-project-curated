@@ -1,0 +1,292 @@
+.container {
+  min-height: calc(100vh - 80px);
+  padding: 3rem 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.pageTitle {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  letter-spacing: 0.02em;
+}
+
+.collectionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.collectionCard {
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.collectionHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.2s ease;
+}
+
+.collectionHeader:hover {
+  background: #fafafa;
+}
+
+.collectionInfo {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.collectionName {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.25rem 0;
+}
+
+.collectionSeason {
+  font-size: 0.75rem;
+  color: #666;
+  margin: 0;
+}
+
+.collectionPreview {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+
+.previewThumb {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.previewImage {
+  object-fit: cover;
+}
+
+.expandIcon {
+  font-size: 1.5rem;
+  color: #666;
+  width: 30px;
+  text-align: center;
+}
+
+.expandedContent {
+  border-top: 1px solid #e0e0e0;
+  padding: 2rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.expandedTop {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.collectionDetails {
+  flex: 1;
+  max-width: 350px;
+}
+
+.detailsTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 0.25rem 0;
+}
+
+.detailsSeason {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0 0 1.5rem 0;
+}
+
+.detailsDescription {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 0 1.25rem 0;
+}
+
+.detailsDesign {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+  font-style: italic;
+}
+
+.productCarousel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carouselArrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.carouselArrow:hover:not(:disabled) {
+  border-color: #000;
+}
+
+.carouselArrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.carouselTrack {
+  flex: 1;
+  overflow: hidden;
+}
+
+.carouselSlider {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.carouselItem {
+  flex-shrink: 0;
+}
+
+.carouselImageWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: #ffffff;
+}
+
+.carouselImage {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.carouselItem:hover .carouselImage {
+  transform: scale(1.05);
+}
+
+.lookbook {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+}
+
+.lookbookTitle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+  color: #666;
+}
+
+.lookbookGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.lookbookImage {
+  position: relative;
+  aspect-ratio: 3/4;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.lookbookImg {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.lookbookImage:hover .lookbookImg {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .expandedTop {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .collectionDetails {
+    max-width: 100%;
+  }
+
+  .lookbookGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  .collectionHeader {
+    flex-wrap: wrap;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .collectionInfo {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .collectionPreview {
+    flex: 1;
+    margin-right: 1rem;
+    justify-content: flex-start;
+  }
+
+  .previewThumb {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carouselImageWrapper {
+    width: 100px;
+    height: 100px;
+  }
+}
